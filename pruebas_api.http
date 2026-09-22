@@ -1,0 +1,21 @@
+### Prueba 1: Inferencia de IA (Cliente con Riesgo Alto)
+POST https://django-backend-ecosystem-ksn7.onrender.com/api/v1/predict/
+Content-Type: application/json
+
+{
+  "frecuencia_compra": 1,
+  "monto_promedio": 12000.0,
+  "dias_ultima_compra": 50
+}
+
+###
+
+### Prueba 2: Inferencia de IA (Cliente Activo / Bajo Riesgo)
+POST https://django-backend-ecosystem-ksn7.onrender.com/api/v1/predict/
+Content-Type: application/json
+
+{
+  "frecuencia_compra": 18,
+  "monto_promedio": 180000.0,
+  "dias_ultima_compra": 2
+}
