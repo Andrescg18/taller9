@@ -1,4 +1,4 @@
-### Prueba 1: Inferencia de IA (Cliente con Riesgo Alto)
+Prueba 1: Inferencia de IA (Cliente con Riesgo Alto)
 POST https://django-backend-ecosystem-ksn7.onrender.com/api/v1/predict/
 Content-Type: application/json
 
@@ -8,9 +8,9 @@ Content-Type: application/json
   "dias_ultima_compra": 45
 }
 
-###
 
-### Prueba 2: Inferencia de IA (Cliente Activo / Bajo Riesgo)
+
+Prueba 2: Inferencia de IA (Cliente Activo / Bajo Riesgo)
 POST https://django-backend-ecosystem-ksn7.onrender.com/api/v1/predict/
 Content-Type: application/json
 
