@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'drf_spectacular',
     'api',
 ]
 
@@ -133,3 +134,14 @@ MAILERS = {
 #===========================
 # CI/CD Pipeline validation test - taller8 - 2026
 #=========================== 
+
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'API Ecosistema Backend - Taller 9',
+    'DESCRIPTION': 'Documentación interactiva de la API con inferencia de IA',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+}
