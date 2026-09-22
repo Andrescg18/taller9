@@ -3,9 +3,9 @@ POST https://django-backend-ecosystem-ksn7.onrender.com/api/v1/predict/
 Content-Type: application/json
 
 {
-  "frecuencia_compra": 1,
-  "monto_promedio": 12000.0,
-  "dias_ultima_compra": 50
+  "frecuencia_compra": 2,
+  "monto_promedio": 15000,
+  "dias_ultima_compra": 45
 }
 
 ###

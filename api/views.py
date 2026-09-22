@@ -1,7 +1,7 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
-from drf_spectacular.utils import extend_schema
+from drf_spectacular.utils import extend_schema, OpenApiExample
 from .serializers import PredictInputSerializer, PredictOutputSerializer
 
 @extend_schema(
@@ -9,7 +9,18 @@ from .serializers import PredictInputSerializer, PredictOutputSerializer
     request=PredictInputSerializer,
     responses={200: PredictOutputSerializer},
     description="Inferencia de IA para análisis de riesgo y predicción de comportamiento de compra del cliente.",
-    summary="Predicción de Riesgo de Cliente"
+    summary="Predicción de Riesgo de Cliente",
+    examples=[
+        OpenApiExample(
+            'Ejemplo de Inferencia',
+            value={
+                "frecuencia_compra": 2,
+                "monto_promedio": 15000,
+                "dias_ultima_compra": 45
+            },
+            request_only=True,
+        )
+    ]
 )
 @extend_schema(
     methods=['GET'],
@@ -30,9 +41,9 @@ def predict_view(request):
         return Response({
             "mensaje": "Endpoint de inferencia de IA activo. Envía una petición POST con los datos del cliente.",
             "ejemplo_payload": {
-                "frecuencia_compra": 1,
-                "monto_promedio": 12000.0,
-                "dias_ultima_compra": 50
+                "frecuencia_compra": 2,
+                "monto_promedio": 15000,
+                "dias_ultima_compra": 45
             }
         }, status=status.HTTP_200_OK)
 
